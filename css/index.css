@@ -46,7 +46,7 @@ nav ul li a{
 
 .background-div{
     max-width: 100%;
-    background-image: url(/assets/building.webp);
+    background-image: url(./assets/building.webp);
     background-size: cover;
     
 }
