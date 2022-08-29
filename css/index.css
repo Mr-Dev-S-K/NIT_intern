@@ -280,3 +280,20 @@ nav ul li a{
     background-color: #ffffff;
     color: #000000;
   }
+
+
+  .target {
+    opacity: 0;
+    transition: .5s ease all;
+    color: #FFF;
+  }
+
+  .bottom {
+    background-color: rgb(65, 91, 138);
+    transform: translateY(100vw);
+  }
+
+  .target.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }

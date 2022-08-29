@@ -14,12 +14,12 @@
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
+        <a href="#">Administration</a>
         <a href="#">Academics</a>
-        <a href="#">Campus</a>
-        <a href="#">In Foucs</a>
-        <a href="#">Visit</a>
-        <a href="#">About</a>
-        <a href="#">News</a>
+        <a href="#">Departments</a>
+        <a href="#">Activities</a>
+        <a href="#">Facilities</a>
+        <a href="#">About Us</a>
     </div>
 </div>
 
@@ -43,18 +43,7 @@
 </div>
 
 
-    <!-- <div>
-        hello<br />
-        hello<br />
-        hello<br />
-        hello<br />
-        hello<br />
-        hello<br />
-        hello<br />
-        hello<br />
-    </div> -->
-
-<div class="bg-gradient-div" id="background">
+<div class="bg-gradient-div target bottom" id="background">
     <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding-top: 50vh;">
         <h1 style="font-weight: lighter; color: white; margin: 0;">NIT Arunachal Pradesh</h1>
         <div class="btn-group">
@@ -71,7 +60,26 @@
     </div>
 </div>
 
+<script>
+    let targets = document.querySelectorAll('.target');
 
+window.addEventListener("scroll", function(){
+  let doc = document.documentElement;
+  let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+  
+  let windowHeight = window.innerHeight;
+  
+  for (i = 0; i < targets.length; ++i) {
+    let target = targets[i];
+    if(target.offsetTop < (top + (windowHeight/2))) {
+      target.classList.add("visible");
+    }
+    else {
+      target.classList.remove("visible");
+    }
+  }
+});
+</script>
 
 <script>
     function openNav() {
