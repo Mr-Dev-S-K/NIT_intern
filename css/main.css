@@ -1,0 +1,538 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    background-color: #fefefe;
+    line-height: 1.2
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Trebuchet, sans-serif;
+    font-weight: 400
+}
+
+a {
+    color: #34808f;
+    text-decoration: none
+}
+
+a:hover {
+    color: #2f686d
+}
+
+.fa {
+    color: #34808f
+}
+
+h1 .fa,
+h2 .fa,
+h3 .fa,
+h4 .fa {
+    font-size: 1.2em;
+    padding: 0 5px
+}
+
+.clearfix:after,
+.clearfix:before,
+.row:after,
+.row:before,
+nav:after,
+nav:before {
+    content: ' ';
+    display: table
+}
+
+.clearfix:after,
+.row:after,
+nav:after {
+    clear: both
+}
+
+.pull-left {
+    float: left
+}
+
+.pull-right {
+    float: right
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-center {
+    text-align: center
+}
+
+.fold-link {
+    cursor: pointer
+}
+
+.fold-link i.fa {
+    float: left;
+    margin-right: 10px;
+    transition: all .3s
+}
+
+.fold-link.opened i.fa {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+ul {
+    list-style: circle
+}
+
+.admissions table {
+    border: 1px solid #ccc;
+    margin: 20px auto 50px;
+    width: 100%
+}
+
+.admissions td[rowspan] {
+    width: 20%
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: .1em .2em;
+    border-radius: 1px
+}
+
+.box {
+    background-color: #fff;
+    box-shadow: 0 0 1px 2px #ccc
+}
+
+article li {
+    margin: .75em 0;
+    line-height: 1.5
+}
+
+.tinymce-body {
+    background: #fff;
+    font-size: 1em;
+    line-height: 1.5
+}
+
+.text-input,
+input[type=text],
+input[type=password],
+input[type=email],
+textarea {
+    background-color: #fefefe;
+    border: 1px solid #cbcbcb;
+    border-radius: 1px;
+    color: #1a1a1a;
+    display: inline-block;
+    height: auto;
+    outline: 0;
+    padding: .4em .6em;
+    transition: .2s all
+}
+
+.text-input:hover,
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=email]:hover,
+textarea:hover {
+    border: 1px solid #989898
+}
+
+.text-input:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+textarea:focus {
+    border: 1px solid #989898;
+    box-shadow: 0 0 5px #a5a5a5
+}
+
+body,
+html {
+    height: 100%
+}
+
+.page-wrapper {
+    margin: 0 auto -100px;
+    min-height: 100%;
+    padding-bottom: 30px
+}
+
+.page-wrapper:after {
+    content: '';
+    display: block
+}
+
+.page-wrapper:after,
+footer {
+    height: 100px
+}
+
+.container {
+    margin: auto;
+    width: 90%
+}
+
+@media (max-width:768px) {
+    .container {
+        width: 100%
+    }
+}
+
+footer {
+    background-color: #f5f5f5;
+    border-top: 2px solid #ccc;
+    padding: 1em;
+    text-align: center
+}
+
+nav {
+    z-index: 99;
+    position: relative;
+    padding-top: .75em
+}
+
+nav ul {
+    margin: 0;
+    list-style: none;
+    padding: 0
+}
+
+nav ul>li {
+    display: block
+}
+
+nav .college-name-and-logo {
+    font-size: 2em;
+    line-height: 1.5em;
+    text-align: right;
+    color: #333;
+    font-family: "Times new roman"
+}
+
+nav .college-name-and-logo .college-logo {
+    height: 3em;
+    float: left
+}
+
+nav .college-name-and-logo .college-logo img {
+    height: 100%
+}
+
+nav ul.navbar {
+    margin-top: .75em;
+    float: right
+}
+
+nav ul.navbar>li {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-bottom: none
+}
+
+nav ul.navbar>li:first-child {
+    margin-left: 0
+}
+
+nav ul.navbar>li:last-child {
+    margin-right: 1px
+}
+
+nav ul.navbar>li a {
+    display: block;
+    padding: .8em 1em
+}
+
+nav ul.navbar>li ul {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    min-width: 12em;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .16), 0 -1px 10px 0 rgba(0, 0, 0, .12)
+}
+
+nav ul.navbar>li ul a {
+    border-left: 6px solid #34808f
+}
+
+.no-js nav ul.navbar>li:hover,
+nav ul.navbar>li.hover {
+    z-index: 101
+}
+
+.no-js nav ul.navbar>li:hover ul,
+nav ul.navbar>li.hover ul {
+    display: block
+}
+
+.no-js nav ul.navbar>li:hover>a,
+nav ul.navbar>li a.active,
+nav ul.navbar>li a:hover,
+nav ul.navbar>li.hover>a {
+    background-color: #34808f;
+    color: #fff
+}
+
+.no-js nav ul.navbar>li:hover>a .fa,
+nav ul.navbar>li a.active .fa,
+nav ul.navbar>li a:hover .fa,
+nav ul.navbar>li.hover>a .fa {
+    color: #fff
+}
+
+nav .navbar-toggle {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-size: 1em;
+    line-height: 1em;
+    padding: 1em;
+    height: 3em;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 #333;
+    text-align: center
+}
+
+nav.admin-nav {
+    margin-top: 0;
+    padding-top: 0
+}
+
+nav.admin-nav ul {
+    margin-top: 0;
+    margin-right: 2em;
+    float: right
+}
+
+nav.admin-nav ul>li {
+    float: left;
+    border: 1px solid #ccc;
+    margin: 0
+}
+
+@media (max-width:768px) {
+    nav.admin-nav ul>li {
+        width: 33.33%
+    }
+}
+
+nav.admin-nav ul>li a {
+    padding: .5em 1.2em
+}
+
+@media (max-width:768px) {
+    nav.normal-nav .college-name-and-logo {
+        text-align: center
+    }
+
+    nav.normal-nav .college-name-and-logo .college-logo {
+        display: block;
+        margin: auto;
+        float: none
+    }
+
+    nav.normal-nav .navbar-container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        width: 85%;
+        background-color: #fff;
+        transition: left .35s
+    }
+
+    nav.normal-nav ul.navbar {
+        box-shadow: 0 0 2px 3px #ccc;
+        margin-top: 0;
+        overflow: auto;
+        height: 100%;
+        width: 100%
+    }
+
+    nav.normal-nav ul.navbar>li {
+        display: block;
+        float: none;
+        margin: 0;
+        text-align: center;
+        border: 0;
+        box-shadow: 0 0 1px #aaa
+    }
+
+    nav.normal-nav ul.navbar>li.opened ul {
+        box-shadow: 0 0 3px 1px #ccc inset;
+        background-color: #fefefe;
+        display: block;
+        position: static;
+        width: 100%
+    }
+
+    nav.normal-nav ul.navbar>li.opened ul a {
+        border-left: none
+    }
+
+    nav.normal-nav.opened .navbar-container {
+        left: 0
+    }
+
+    nav.normal-nav .navbar-toggle {
+        display: block
+    }
+}
+
+.social-media-buttons-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100
+}
+
+ul.social-media-buttons {
+    margin: 0;
+    list-style: none
+}
+
+ul.social-media-buttons li {
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    margin: .1em
+}
+
+ul.social-media-buttons a {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+ul.social-media-buttons .facebook {
+    background: #3b5998
+}
+
+ul.social-media-buttons .twitter {
+    background: #00aced
+}
+
+ul.social-media-buttons .google-plus {
+    background: #dd4b39
+}
+
+ul.social-media-buttons .instagram {
+    background: #125688
+}
+
+ul.social-media-buttons .youtube {
+    background: #b00
+}
+
+ul.social-media-buttons li .fa {
+    color: #fff
+}
+
+.row.padded-cols [class*=col-] {
+    padding: 1em
+}
+
+[class*=col-] {
+    float: left
+}
+
+.col-1-12 {
+    width: 8.33333%
+}
+
+.col-2-12 {
+    width: 16.66667%
+}
+
+.col-3-12 {
+    width: 25%
+}
+
+.col-4-12 {
+    width: 33.33333%
+}
+
+.col-5-12 {
+    width: 41.66667%
+}
+
+.col-6-12 {
+    width: 50%
+}
+
+.col-7-12 {
+    width: 58.33333%
+}
+
+.col-8-12 {
+    width: 66.66667%
+}
+
+.col-9-12 {
+    width: 75%
+}
+
+.col-10-12 {
+    width: 83.33333%
+}
+
+.col-11-12 {
+    width: 91.66667%
+}
+
+.col-12-12 {
+    width: 100%
+}
+
+@media all and (max-width:768px) {
+    [class*=col-]:not(.do-not-fold) {
+        float: none;
+        width: 100%
+    }
+}
+
+.btn {
+    border: 2px solid #ccc;
+    display: inline-block;
+    padding: .45em .75em;
+    cursor: pointer;
+    transition: color .2s, border-color .2s
+}
+
+.btn-large {
+    font-size: 1.2em
+}
+
+.btn:hover {
+    border-color: #999;
+    color: #2f686d;
+    transition: color .2s, border-color .2s
+}

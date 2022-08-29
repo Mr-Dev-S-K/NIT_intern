@@ -1,0 +1,174 @@
+#carousel-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 2em
+}
+
+#carousel {
+    margin: auto;
+    position: relative
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next,
+.owl-theme .owl-controls .owl-buttons .owl-prev {
+    position: absolute;
+    line-height: 100%;
+    top: 50%;
+    margin: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, .3);
+    padding: .5em;
+    font-size: 3em;
+    opacity: 1;
+    transition: background-color .3s
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next i.fa,
+.owl-theme .owl-controls .owl-buttons .owl-prev i.fa {
+    color: #fff;
+    color: rgba(255, 255, 255, .9);
+    font-size: 1.3em;
+    text-shadow: 0 0 5px #000;
+    font-weight: 400
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next:hover,
+.owl-theme .owl-controls .owl-buttons .owl-prev:hover {
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next:hover i.fa,
+.owl-theme .owl-controls .owl-buttons .owl-prev:hover i.fa {
+    color: #fff
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next {
+    right: 0
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-prev {
+    left: 0
+}
+
+.carousel-frame {
+    background-color: #000;
+    background-size: cover;
+    color: #fff;
+    height: 400px;
+    position: relative
+}
+
+.carousel-frame .caption-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-shadow: 0 0 4px #000
+}
+
+.carousel-frame .caption-text * {
+    margin: .4em 0 .3em
+}
+
+.carousel-frame .caption-text h2 {
+    font-size: 3em
+}
+
+.carousel-frame .caption-text .lead {
+    font-size: 1.2em
+}
+
+.carousel-frame .caption-text .btn {
+    background-color: transparent;
+    transition: background-color .2s, color .2s, border-color .2s
+}
+
+.carousel-frame .caption-text .btn:hover {
+    background-color: rgba(0, 0, 0, .2);
+    transition: background-color .2s, color .2s, border-color .2s
+}
+
+.carousel-frame .btn,
+.carousel-frame .caption-text .fa {
+    color: #fff
+}
+
+.carousel-frame .btn:hover {
+    border-color: #fff
+}
+
+table.carousel-btn {
+    border-collapse: collapse;
+    width: 100%
+}
+
+table.carousel-btn td {
+    padding: 0 1em .25em 0;
+    width: 25%;
+    text-align: center;
+    vertical-align: top;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 5px solid #ccc
+}
+
+table.carousel-btn td .fa {
+    color: #ccc;
+    font-size: 1.5em
+}
+
+table.carousel-btn td a {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+table.carousel-btn td :hover,
+table.carousel-btn td.active {
+    border-bottom-color: #34808F
+}
+
+table.carousel-btn td :hover .fa,
+table.carousel-btn td.active .fa {
+    color: #34808F
+}
+
+.ie8 .carousel .caption-text {
+    top: 10%
+}
+
+.item-list {
+    padding: 0;
+    list-style: none
+}
+
+.list-item {
+    padding: .6em .2em;
+    margin: .2em;
+    border-bottom: 1px solid #ccc
+}
+
+.list-item:first-child {
+    border-top: 1px solid #ccc
+}
+
+@media all and (max-width:768px) {
+    #carousel-container {
+        width: 100%
+    }
+
+    .carousel-frame {
+        height: 300px;
+        font-size: .8em
+    }
+
+    .carousel-frame .caption-text h1,
+    .carousel-frame .caption-text h2 {
+        margin: .3em 0
+    }
+}
